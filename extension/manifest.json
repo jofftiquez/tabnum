@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "tabnum",
+  "version": "1.0.0",
+  "description": "Puts the PR / issue / MR number first in GitHub and GitLab tab titles.",
+  "content_scripts": [
+    {
+      "matches": ["https://github.com/*", "https://gitlab.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "browser_specific_settings": {
+    "gecko": { "id": "tabnum@jofftiquez", "strict_min_version": "109.0" }
+  }
+}
